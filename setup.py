@@ -13,7 +13,7 @@ setuptools.setup(
     description='A python library to get unity catalog table lineage information using azure databricks api',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/famutimine/describr',
+    url='https://github.com/famutimine/tablelineage',
     author='Daniel Famutimi MD, MPH',
     author_email='danielfamutimi@gmail.com',
     license='MIT',
