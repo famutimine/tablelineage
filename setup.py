@@ -37,7 +37,6 @@ setuptools.setup(
     install_requires=[
         'setuptools==75.8.0',
         'pandas==2.2.3',
-        'requests==2.32.3',
-        'pyspark==3.5.0'
+        'requests==2.32.3'
     ],
 )
