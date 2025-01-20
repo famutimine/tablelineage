@@ -35,7 +35,7 @@ setuptools.setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'setuptools==75.8.0',
+        'setuptools==65.6.3',
         'pandas==2.2.3',
         'requests==2.32.3'
     ],
