@@ -23,6 +23,7 @@ df = conn.getTableLineage(catalog_name, schema_name, table_name)
 df.display()
 
 """
-Always exclude 'NA' in the 'lineage_direction' column from the resulting dataframe unless you are interested in the links to the notebooks referencing specified table/view name.
+Always exclude 'NA' in the 'lineage_direction' column from the resulting dataframe,
+unless you are interested in the links to the notebooks referencing specified table/view name.
 
 """
