@@ -7,7 +7,7 @@ import sys
 
 
 class ShowMeLineage:
-    def __init__(self, databricks_instance: str, workspace_id: str):
+    def __init__(self, databricks_instance: str, workspace_id: str, token: str):
         """
         Initialize the ShowMeLineage with Databricks instance details.
 
@@ -17,14 +17,7 @@ class ShowMeLineage:
         """
         self.databricks_instance = databricks_instance
         self.workspace_id = workspace_id
-        self.token = self._get_api_token()
-
-    def _get_api_token(self) -> str:
-        """Retrieve the API token securely."""
-        try:
-            return dbutils.notebook.entry_point.getDbutils().notebook().getContext().apiToken().get()
-        except Exception as e:
-            raise Exception("Failed to retrieve the API token. Ensure you have the necessary permissions.") from e
+        self.token = token
 
     def _parse_timestamp(self, ts_str: str) -> datetime:
         """Parse a timestamp string into a datetime object."""
