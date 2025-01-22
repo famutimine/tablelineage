@@ -9,7 +9,7 @@ with urlopen("https://raw.githubusercontent.com/famutimine/tablelineage/main/REA
 
 setuptools.setup(
     name='tablelineage',
-    version='0.0.7',
+    version='0.0.8',
     description='A python library to get unity catalog table lineage information using azure databricks api',
     long_description=long_description,
     long_description_content_type='text/markdown',
