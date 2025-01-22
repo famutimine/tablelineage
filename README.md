@@ -16,10 +16,12 @@ schema_name = "<schema_name>"
 table_name = "<table_name>"
 databricks_instance = "<databricks_instance"  # example: adb--xxxxxxxxxxx.x.azuredatabricks.net
 workspace_id = "<workspace_id>"
+token = "<token>"
+## For notebook based jobs you can dynamically get token using the following: 
+# token = dbutils.notebook.entry_point.getDbutils().notebook().getContext().apiToken().get()
 
-conn = ShowMeLineage(databricks_instance, workspace_id)
+conn = ShowMeLineage(databricks_instance, workspace_id, token)
 df = conn.getTableLineage(catalog_name, schema_name, table_name)
-
 df.display()
 
 """
